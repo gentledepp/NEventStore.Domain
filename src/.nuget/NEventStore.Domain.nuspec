@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>NEventStore.Domain</id>
-    <version>5.0</version>
+    <version>5.0.1</version>
     <title>NEventStore Domain</title>
     <authors>NEventStore Dev Team</authors>
     <owners>NEventStore Dev Team</owners>
@@ -14,10 +14,11 @@
     <tags>events, event sourcing, cqrs, storage, persistence, database, ddd, domain</tags>
 	<releaseNotes></releaseNotes>
   <dependencies>
-    <dependency id="NEventStore" version="5.2" />
+    <dependency id="NEventStore" version="5.2.1" />
   </dependencies>
   </metadata>
   <files>
-    <file src="publish-net40\bin\**" target="lib\net40"/>
+    <file src="output\net\NEventStore.Domain*" target="lib\net452"/>
+    <file src="output\pcl\NEventStore.Domain*" target="lib\portable-net45+sl50+win+wpa81+wp80"/>
   </files>  
 </package>

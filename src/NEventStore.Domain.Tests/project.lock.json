@@ -115,6 +115,7 @@
           "lib/net45/xunit.execution.desktop.dll": {}
         }
       },
+      "xunit.runner.console/2.1.0": {},
       "Xunit2Should/5.0.0": {
         "dependencies": {
           "xunit.abstractions": "[2.0.0, 3.0.0)",
@@ -242,6 +243,7 @@
           "lib/net45/xunit.execution.desktop.dll": {}
         }
       },
+      "xunit.runner.console/2.1.0": {},
       "Xunit2Should/5.0.0": {
         "dependencies": {
           "xunit.abstractions": "[2.0.0, 3.0.0)",
@@ -566,6 +568,25 @@
         "lib/xamarinios/xunit.execution.dotnet.xml",
         "xunit.extensibility.execution.2.1.0.nupkg.sha512",
         "xunit.extensibility.execution.nuspec"
+      ]
+    },
+    "xunit.runner.console/2.1.0": {
+      "sha512": "dryP6nBDWD2aH6OUidwoPQLebelnfA6DDKUs9PxJ6iPDbT9t5eSKyjqLSas/nQFEJZwXXWVnbImrgK/IgiyOdQ==",
+      "type": "package",
+      "path": "xunit.runner.console/2.1.0",
+      "files": [
+        "tools/HTML.xslt",
+        "tools/NUnitXml.xslt",
+        "tools/xUnit1.xslt",
+        "tools/xunit.abstractions.dll",
+        "tools/xunit.console.exe",
+        "tools/xunit.console.exe.config",
+        "tools/xunit.console.x86.exe",
+        "tools/xunit.console.x86.exe.config",
+        "tools/xunit.runner.reporters.desktop.dll",
+        "tools/xunit.runner.utility.desktop.dll",
+        "xunit.runner.console.2.1.0.nupkg.sha512",
+        "xunit.runner.console.nuspec"
       ]
     },
     "Xunit2Should/5.0.0": {
