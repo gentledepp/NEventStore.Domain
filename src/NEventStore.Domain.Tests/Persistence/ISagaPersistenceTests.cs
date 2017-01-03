@@ -5,7 +5,7 @@
     using NEventStore.Domain.Persistence.EventStore;
     using NEventStore.Persistence.AcceptanceTests.BDD;
     using Xunit;
-    using Xunit.Should;
+    using XunitShould;
 
     public class using_a_sagaeventstorerepository : SpecificationBase
 	{
@@ -41,7 +41,7 @@
 		[Fact]
 		public void should_be_returned_when_loaded_by_id()
 		{
-			_repository.GetById<TestSaga>(_id).Id.ShouldBe(_testSaga.Id);
+			_repository.GetById<TestSaga>(_id).Id.ShouldEqual(_testSaga.Id);
 		}
 	}
 }

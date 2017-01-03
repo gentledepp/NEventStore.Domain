@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9f8f0c7b-a3ac-40e7-b48a-bc2d1d2b9be0</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>NEventStore.Domain.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\AggregateBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ConflictDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ConventionEventRouter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\HandlerForDomainEventNotFoundException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\RegistrationEventRouter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\SagaBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IAggregate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IDetectConflicts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IMemento.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IRouteEvents.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISaga.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\ConflictingCommandException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\EventStore\EventStoreRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\EventStore\ExceptionMessages.Designer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\EventStore\SagaEventStoreRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\IConstructAggregates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\IConstructSagas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\IRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\ISagaRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\PersistenceException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\RepositoryExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Persistence\SagaRepositoryExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProjectAssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Persistence\EventStore\ExceptionMessages.resx" />
+  </ItemGroup>
+</Project>

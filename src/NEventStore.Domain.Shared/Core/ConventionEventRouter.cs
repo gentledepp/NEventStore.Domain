@@ -50,7 +50,11 @@ namespace NEventStore.Domain.Core
 			// Get instance methods named Apply with one parameter returning void
 			var applyMethods =
 				aggregate.GetType()
-				         .GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
+#if PCL
+                        .GetTypeInfo().DeclaredMethods
+#else
+                         .GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
+#endif
 				         .Where(
 					         m => m.Name == "Apply" && m.GetParameters().Length == 1 && m.ReturnParameter.ParameterType == typeof(void))
 				         .Select(m => new { Method = m, MessageType = m.GetParameters().Single().ParameterType });

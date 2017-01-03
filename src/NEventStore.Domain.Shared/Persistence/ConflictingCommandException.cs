@@ -4,9 +4,11 @@ namespace NEventStore.Domain.Persistence
     using System.Runtime.Serialization;
 
     /// <summary>
-	///   Represents a command that could not be executed because it conflicted with the command of another user or actor.
-	/// </summary>
+    ///   Represents a command that could not be executed because it conflicted with the command of another user or actor.
+    /// </summary>
+#if !PCL
 	[Serializable]
+#endif
 	public class ConflictingCommandException : Exception
 	{
 		/// <summary>
@@ -32,6 +34,7 @@ namespace NEventStore.Domain.Persistence
 			: base(message, innerException)
 		{}
 
+#if !PCL
 		/// <summary>
 		///   Initializes a new instance of the ConflictingCommandException class.
 		/// </summary>
@@ -40,5 +43,6 @@ namespace NEventStore.Domain.Persistence
 		protected ConflictingCommandException(SerializationInfo info, StreamingContext context)
 			: base(info, context)
 		{}
+#endif
 	}
 }

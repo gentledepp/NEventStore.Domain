@@ -3,7 +3,7 @@
     using System;
     using NEventStore.Persistence.AcceptanceTests.BDD;
     using Xunit;
-    using Xunit.Should;
+    using XunitShould;
 
     public class when_an_aggregate_is_created : SpecificationBase
     {
@@ -19,27 +19,27 @@
         [Fact]
         public void should_have_raised_creation_event()
         {
-            _testAggregate.HasRaisedEvent<TestAggregateCreatedEvent>().ShouldBe(true);
+            _testAggregate.HasRaisedEvent<TestAggregateCreatedEvent>().ShouldEqual(true);
         }
 
         [Fact]
         public void creation_event_should_carry_the_correct_data()
         {
             var evt = _testAggregate.LastRaisedEvent<TestAggregateCreatedEvent>();
-            evt.Id.ShouldBe(_aggregateId);
-            evt.Name.ShouldBe("Test");
+            evt.Id.ShouldEqual(_aggregateId);
+            evt.Name.ShouldEqual("Test");
         }
 
         [Fact]
         public void should_have_name()
         {
-            _testAggregate.Name.ShouldBe("Test");
+            _testAggregate.Name.ShouldEqual("Test");
         }
 
         [Fact]
         public void aggregate_version_should_be_one()
         {
-            _testAggregate.Version.ShouldBe(1);
+            _testAggregate.Version.ShouldEqual(1);
         }
     }
 
@@ -62,27 +62,27 @@
         [Fact]
         public void should_have_raised_an_update_event()
         {
-            _testAggregate.HasRaisedEvent<NameChangedEvent>().ShouldBe(true);
+            _testAggregate.HasRaisedEvent<NameChangedEvent>().ShouldEqual(true);
         }
 
         [Fact]
         public void creation_event_should_carry_the_correct_data()
         {
             var evt = _testAggregate.LastRaisedEvent<NameChangedEvent>();
-            evt.Id.ShouldBe(_aggregateId);
-            evt.Name.ShouldBe("UpdatedTest");
+            evt.Id.ShouldEqual(_aggregateId);
+            evt.Name.ShouldEqual("UpdatedTest");
         }
 
         [Fact]
         public void name_change_should_be_applied()
         {
-            _testAggregate.Name.ShouldBe("UpdatedTest");
+            _testAggregate.Name.ShouldEqual("UpdatedTest");
         }
 
         [Fact]
         public void applying_events_automatically_increments_version()
         {
-            _testAggregate.Version.ShouldBe(2);
+            _testAggregate.Version.ShouldEqual(2);
         }
     }
 }

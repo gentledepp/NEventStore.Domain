@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NEventStore", "..\dependencies\NEventStore\src\NEventStore\NEventStore.csproj", "{03946843-F343-419C-88EF-3E446D08DFA6}"
 EndProject
@@ -21,7 +21,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NEventStore.Persistence.Acc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".core", ".core", "{CFBBB291-5AA2-4CC0-8FA0-A0522514D5E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NEventStore.Domain.PCL", "NEventStore.Domain.PCL\NEventStore.Domain.PCL.csproj", "{9ED0581F-9CA0-4B43-9CAC-934744AFE06C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NEventStore.Domain.Shared", "NEventStore.Domain.Shared\NEventStore.Domain.Shared.shproj", "{9F8F0C7B-A3AC-40E7-B48A-BC2D1D2B9BE0}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NEventStore.Shared", "..\dependencies\NEventStore\src\NEventStore.Shared\NEventStore.Shared.shproj", "{DF1861CB-AF1C-47E8-8306-EE36E38A6DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NEventStore.PCL", "..\dependencies\NEventStore\src\NEventStore.PCL\NEventStore.PCL.csproj", "{184306A0-CD59-46A7-AFE9-301335949328}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\dependencies\NEventStore\src\NEventStore.Shared\NEventStore.Shared.projitems*{03946843-f343-419c-88ef-3e446d08dfa6}*SharedItemsImports = 4
+		..\dependencies\NEventStore\src\NEventStore.Shared\NEventStore.Shared.projitems*{184306a0-cd59-46a7-afe9-301335949328}*SharedItemsImports = 4
+		NEventStore.Domain.Shared\NEventStore.Domain.Shared.projitems*{214b41f6-70db-48f9-a110-e3f6b0339df0}*SharedItemsImports = 4
+		NEventStore.Domain.Shared\NEventStore.Domain.Shared.projitems*{9ed0581f-9ca0-4b43-9cac-934744afe06c}*SharedItemsImports = 4
+		NEventStore.Domain.Shared\NEventStore.Domain.Shared.projitems*{9f8f0c7b-a3ac-40e7-b48a-bc2d1d2b9be0}*SharedItemsImports = 13
+		..\dependencies\NEventStore\src\NEventStore.Shared\NEventStore.Shared.projitems*{df1861cb-af1c-47e8-8306-ee36e38a6df4}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -43,6 +59,14 @@ Global
 		{3FE594FE-16FF-4405-97D5-5A58FB12520B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FE594FE-16FF-4405-97D5-5A58FB12520B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FE594FE-16FF-4405-97D5-5A58FB12520B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED0581F-9CA0-4B43-9CAC-934744AFE06C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED0581F-9CA0-4B43-9CAC-934744AFE06C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED0581F-9CA0-4B43-9CAC-934744AFE06C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED0581F-9CA0-4B43-9CAC-934744AFE06C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184306A0-CD59-46A7-AFE9-301335949328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184306A0-CD59-46A7-AFE9-301335949328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184306A0-CD59-46A7-AFE9-301335949328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184306A0-CD59-46A7-AFE9-301335949328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +74,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{03946843-F343-419C-88EF-3E446D08DFA6} = {CFBBB291-5AA2-4CC0-8FA0-A0522514D5E3}
 		{3FE594FE-16FF-4405-97D5-5A58FB12520B} = {CFBBB291-5AA2-4CC0-8FA0-A0522514D5E3}
+		{DF1861CB-AF1C-47E8-8306-EE36E38A6DF4} = {CFBBB291-5AA2-4CC0-8FA0-A0522514D5E3}
+		{184306A0-CD59-46A7-AFE9-301335949328} = {CFBBB291-5AA2-4CC0-8FA0-A0522514D5E3}
 	EndGlobalSection
 EndGlobal

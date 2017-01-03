@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Reflection;
+
 namespace NEventStore.Domain.Persistence.EventStore {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -36,7 +38,7 @@ namespace NEventStore.Domain.Persistence.EventStore {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CommonDomain.Persistence.EventStore.ExceptionMessages", typeof(ExceptionMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CommonDomain.Persistence.EventStore.ExceptionMessages", typeof(ExceptionMessages).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
