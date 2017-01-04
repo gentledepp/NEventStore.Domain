@@ -1,8 +1,8 @@
 function getTestRunner([string]$packagePath){
-	$testRunners = @(gci $nuget_packages_dir -rec -filter xunit.console.x86.exe)
+	$testRunners = @(gci $nuget_packages_dir -rec -filter xunit.console.exe)
 	if ($testRunners.Length -ne 1)
 	{
-		throw "Expected to find 1 xunit.console.x86.exe, but found $($testRunners.Length)."
+		throw "Expected to find 1 xunit.console.exe, but found $($testRunners.Length)."
 	}
 
 	$testRunner = $testRunners[0].FullName
@@ -55,9 +55,9 @@ task Test -depends RunUnitTests
 task RunUnitTests {
 	"Unit Tests"
 	EnsureDirectory $output_directory
-	# Invoke-XUnit -Path $src_directory -TestSpec '*NEventStore.Domain.Tests.dll' `
-    # -SummaryPath $output_directory\unit_tests.xml `
-    # -XUnitPath $xunit_path
+	Invoke-XUnit -Path $src_directory -TestSpec '*NEventStore.Domain.Tests.dll' `
+    -SummaryPath $output_directory\unit_tests.xml `
+    -XUnitPath $xunit_path
 }
 
 task Package -depends Build {
